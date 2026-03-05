@@ -1,0 +1,3 @@
+spring.application.name=homemade-pickles
+
+spring.data.mongodb.uri=mongodb+srv://pickles_admin:project_p@cluster0.cwxwzko.mongodb.net/?appName=Cluster0
