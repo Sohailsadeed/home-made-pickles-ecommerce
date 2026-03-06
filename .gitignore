@@ -74,3 +74,8 @@ target/
 # ======================
 ehthumbs.db
 Desktop.ini
+
+# ======================
+# Eclipse / STS Workspace
+# ======================
+.metadata/
