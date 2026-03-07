@@ -15,7 +15,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping
-    public List<Product> getAllProducts(@RequestParam(required = false) String category) {
+    public List<Product> getAllProducts(@RequestParam(name = "category", required = false) String category) {
         if (category != null) {
             return productService.getProductsByCategory(category);
         }
@@ -23,7 +23,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public Product getProductById(@PathVariable String id) {
+    public Product getProductById(@PathVariable(name = "id") String id) {
         return productService.getProductById(id).orElseThrow(() -> new RuntimeException("Product not found"));
     }
 

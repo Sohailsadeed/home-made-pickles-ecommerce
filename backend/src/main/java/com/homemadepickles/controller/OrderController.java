@@ -20,7 +20,7 @@ public class OrderController {
     }
 
     @GetMapping("/user/{userId}")
-    public List<Order> getOrdersByUserId(@PathVariable String userId) {
+    public List<Order> getOrdersByUserId(@PathVariable(name = "userId") String userId) {
         return orderService.getOrdersByUserId(userId);
     }
 }

@@ -20,12 +20,12 @@ public class SubscriptionController {
     }
 
     @GetMapping("/user/{userId}")
-    public List<Subscription> getSubscriptionsByUserId(@PathVariable String userId) {
+    public List<Subscription> getSubscriptionsByUserId(@PathVariable(name = "userId") String userId) {
         return subscriptionService.getSubscriptionsByUserId(userId);
     }
 
-    @DeleteMapping("/{id}")
-    public Subscription cancelSubscription(@PathVariable String id) {
+    @PostMapping("/{id}/cancel")
+    public Subscription cancelSubscription(@PathVariable(name = "id") String id) {
         return subscriptionService.cancelSubscription(id);
     }
 }
